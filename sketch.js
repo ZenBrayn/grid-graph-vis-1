@@ -1,12 +1,12 @@
 function setup() {
-  sheight = displayWidth;
-  swidth = displayHeight;
-  createCanvas(swidth, sheight);
+  createCanvas(displayWidth, displayHeight);
   background(0);
   noStroke();
   
-  x_center = swidth * 0.5;
-  y_center = sheight * 0.5;
+  print(displayHeight);
+    
+  x_center = displayWidth * 0.5;
+  y_center = displayHeight * 0.5;
   
   pt_size = 10;
   ln_size = pt_size * 0.25;
@@ -64,7 +64,7 @@ function draw() {
         pop();
       } 
     }
-  } else if (draw_mode == "single") {  
+  } else if (draw_mode == "single") {
     // the simple one
     background(0);
     frameRate(2);
