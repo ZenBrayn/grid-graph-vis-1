@@ -16,22 +16,20 @@ function setup() {
   ln_color = color(200, 1);
   color_state = 1;
   
-  n_row = 7;
-  n_col = 10;
+  n_row = 4;
+  n_col = 8;
   
   frame_rate = 25;
   frameRate(frame_rate);
-  
-  draw_mode = "full";
 }
 
 
 
-function draw() {
+function drawViz(mode) {
   // background(0);  
   translate(100, 100);
   
-  if (draw_mode == "full") {
+  if (mode == "full") {
     // the full animation
     if (frameCount % (frame_rate * 10) == 0) {
       if (color_state == 0) {
@@ -64,7 +62,7 @@ function draw() {
         pop();
       } 
     }
-  } else if (draw_mode == "single") {
+  } else if (mode == "single") {
     // the simple one
     background(0);
     frameRate(2);
@@ -74,7 +72,7 @@ function draw() {
     n_vertices = Math.floor((Math.random() * 4) + 1);
     vertices = selectRandomVertices(n_vertices);
     drawGridGraph(vertices);
-  } else if (draw_mode == "grid") {
+  } else if (mode == "grid") {
     background(0);
     frameRate(2);
     pt_color = color(100)

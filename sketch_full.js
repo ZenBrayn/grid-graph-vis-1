@@ -1,0 +1,5 @@
+
+
+function draw() {
+  drawViz("full");
+}
