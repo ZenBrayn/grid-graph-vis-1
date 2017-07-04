@@ -1,8 +1,4 @@
 function setup() {
-    
-  x_center = displayWidth * 0.5;
-  y_center = displayHeight * 0.5;
-  
   pt_size = 10;
   ln_size = pt_size * 0.25;
   spacing = pt_size * 10;
