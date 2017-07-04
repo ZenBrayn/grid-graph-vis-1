@@ -1,9 +1,4 @@
 function setup() {
-  createCanvas(displayWidth, displayHeight);
-  background(0);
-  noStroke();
-  
-  print(displayHeight);
     
   x_center = displayWidth * 0.5;
   y_center = displayHeight * 0.5;
@@ -19,6 +14,10 @@ function setup() {
   n_row = 4;
   n_col = 8;
   
+  createCanvas(spacing * n_col + 200, spacing * n_row + 200);
+  background(0);
+  noStroke();
+
   frame_rate = 25;
   frameRate(frame_rate);
 }
